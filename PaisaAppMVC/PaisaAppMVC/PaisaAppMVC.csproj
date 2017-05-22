@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{1B2C5326-8AA5-4948-AB2C-849535071CB5}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PaisaAppMVC</RootNamespace>
+    <AssemblyName>PaisaAppMVC</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controlador\Program.cs" />
+    <Compile Include="Modelo\BEBIDAS\Buscar_B1.cs" />
+    <Compile Include="Modelo\BEBIDAS\Buscar_B_DAL.cs" />
+    <Compile Include="Modelo\COMIDACORRIDA\Buscar_CC1.cs" />
+    <Compile Include="Modelo\COMIDACORRIDA\Buscar_CC_DAL.cs" />
+    <Compile Include="Modelo\COMIDARAPIDA\Buscar_CR1.cs" />
+    <Compile Include="Modelo\COMIDARAPIDA\Buscar_CR_DAL.cs" />
+    <Compile Include="Modelo\Conexion\ConexionBD.cs" />
+    <Compile Include="Modelo\POSTRES\Buscar_P1.cs" />
+    <Compile Include="Modelo\POSTRES\Buscar_P_DAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vista\BEBIDAS\Bebidas.cs">
+      <Generator>ResXFileCodeGenerator</Generator>
+    </Compile>
+    <Compile Include="Vista\BEBIDAS\Bebidas.Designer.cs">
+      <DependentUpon>Bebidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\BEBIDAS\Buscar_B.cs" />
+    <Compile Include="Vista\BEBIDAS\Buscar_B.Designer.cs">
+      <DependentUpon>Buscar_B.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\COMIDACORRIDA\Buscar_CC.cs" />
+    <Compile Include="Vista\COMIDACORRIDA\Buscar_CC.Designer.cs">
+      <DependentUpon>Buscar_CC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\COMIDACORRIDA\ComidaCorrida.cs" />
+    <Compile Include="Vista\COMIDACORRIDA\ComidaCorrida.Designer.cs">
+      <DependentUpon>ComidaCorrida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\COMIDARAPIDA\Buscar_CR.cs" />
+    <Compile Include="Vista\COMIDARAPIDA\Buscar_CR.Designer.cs">
+      <DependentUpon>Buscar_CR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\COMIDARAPIDA\ComidaRapida.cs" />
+    <Compile Include="Vista\COMIDARAPIDA\ComidaRapida.Designer.cs">
+      <DependentUpon>ComidaRapida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\DatosEmpresa.cs" />
+    <Compile Include="Vista\DatosEmpresa.Designer.cs">
+      <DependentUpon>DatosEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Form1.cs" />
+    <Compile Include="Vista\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Form2.cs" />
+    <Compile Include="Vista\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\POSTRES\Buscar_P.cs" />
+    <Compile Include="Vista\POSTRES\Buscar_P.Designer.cs">
+      <DependentUpon>Buscar_P.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\POSTRES\Postres.cs" />
+    <Compile Include="Vista\POSTRES\Postres.Designer.cs">
+      <DependentUpon>Postres.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modelo" />
+    <Folder Include="Modelo\Conexion" />
+    <Folder Include="Modelo\BEBIDAS" />
+    <Folder Include="Controlador" />
+    <Folder Include="Modelo\COMIDACORRIDA" />
+    <Folder Include="Modelo\COMIDARAPIDA" />
+    <Folder Include="Modelo\POSTRES" />
+    <Folder Include="Vista" />
+    <Folder Include="Vista\BEBIDAS" />
+    <Folder Include="Vista\COMIDACORRIDA" />
+    <Folder Include="Vista\COMIDARAPIDA" />
+    <Folder Include="Vista\POSTRES" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Vista\BEBIDAS\Bebidas.resx">
+      <DependentUpon>Bebidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\BEBIDAS\Buscar_B.resx">
+      <DependentUpon>Buscar_B.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\COMIDACORRIDA\Buscar_CC.resx">
+      <DependentUpon>Buscar_CC.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\COMIDACORRIDA\ComidaCorrida.resx">
+      <DependentUpon>ComidaCorrida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\COMIDARAPIDA\Buscar_CR.resx">
+      <DependentUpon>Buscar_CR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\COMIDARAPIDA\ComidaRapida.resx">
+      <DependentUpon>ComidaRapida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\DatosEmpresa.resx">
+      <DependentUpon>DatosEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\POSTRES\Buscar_P.resx">
+      <DependentUpon>Buscar_P.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\POSTRES\Postres.resx">
+      <DependentUpon>Postres.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
